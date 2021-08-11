@@ -17,7 +17,7 @@ public class Server {
             while (true) {
                 try (Socket socket = serverSocket.accept()) {
 
-                    ClientHandlingThread client = new ClientHandlingThread(socket);
+                    ClientHandlingThread client = new ClientHandlingThread(socket, this);
                     clientThreads.add(client);
                     client.start();
 
@@ -30,5 +30,9 @@ public class Server {
         }
 
         Logger.INSTANCE.log("Stop server!");
+    }
+
+    public void sendMessageAll(Message msg) {
+        clientThreads.forEach(thread -> thread.sendMessage(msg));
     }
 }
