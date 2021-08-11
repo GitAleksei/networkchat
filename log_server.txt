@@ -1,0 +1,21 @@
+1. [Wed Aug 11 15:09:58 UTC 2021] Send message!
+2. [Wed Aug 11 15:09:58 UTC 2021] alarma!
+1. [Wed Aug 11 15:10:06 UTC 2021] Send message!
+2. [Wed Aug 11 15:10:06 UTC 2021] alarma!
+1. [Wed Aug 11 15:19:05 UTC 2021] Start server!
+1. [Wed Aug 11 15:19:59 UTC 2021] Start server!
+1. [Wed Aug 11 15:20:36 UTC 2021] Start server!
+
+1. [Wed Aug 11 15:21:34 UTC 2021] Start server!
+
+1. [Wed Aug 11 15:21:55 UTC 2021] Start server!
+
+1. [Wed Aug 11 15:22:47 UTC 2021] Start server!
+2. [Wed Aug 11 15:22:47 UTC 2021]  2
+3. [Wed Aug 11 15:22:47 UTC 2021] [java.io.FileInputStream.open0(Native Method), java.io.FileInputStream.open(FileInputStream.java:195), java.io.FileInputStream.<init>(FileInputStream.java:138), java.io.FileInputStream.<init>(FileInputStream.java:93), java.io.FileReader.<init>(FileReader.java:58), ru.netology.server.Settings.<clinit>(Settings.java:17), ru.netology.server.Server.<init>(Server.java:6), ru.netology.server.Main.main(Main.java:5)] 2
+
+1. [Wed Aug 11 15:24:25 UTC 2021] Start server!
+2. [Wed Aug 11 15:24:25 UTC 2021] [java.io.FileInputStream.open0(Native Method), java.io.FileInputStream.open(FileInputStream.java:195), java.io.FileInputStream.<init>(FileInputStream.java:138), java.io.FileInputStream.<init>(FileInputStream.java:93), java.io.FileReader.<init>(FileReader.java:58), ru.netology.server.Settings.<clinit>(Settings.java:16), ru.netology.server.Server.<init>(Server.java:6), ru.netology.server.Main.main(Main.java:5)] settings_serve.txt (The system cannot find the file specified)
+
+1. [Wed Aug 11 15:29:09 UTC 2021] Start server!
+2. [Wed Aug 11 15:29:09 UTC 2021] Read "settings_server.txt"
