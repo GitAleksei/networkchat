@@ -1,5 +1,7 @@
 package ru.netology.server;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +10,7 @@ import java.net.Socket;
 import java.util.Arrays;
 
 public class ClientHandlingThread extends Thread {
-    private Socket socket;
+    private final Socket socket;
 
     public ClientHandlingThread(Socket socket) {
         this.socket = socket;
@@ -19,16 +21,21 @@ public class ClientHandlingThread extends Thread {
         try (PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
              BufferedReader in =
                      new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
             Logger.INSTANCE.log("Client connected: " + socket);
 
             String line;
-
             while ((line = in.readLine()) != null) {
-                if (line.equals("/exit")) {
+                Gson gson = new Gson();
+                Message message = gson.fromJson(line, Message.class);
+
+                Logger.INSTANCE.log(message.toString());
+
+                if (message.getText().equals("/exit")) {
                     break;
                 }
 
-                sendMessage(line);
+                sendMessage(message);
             }
 
         } catch (IOException ex) {
@@ -36,7 +43,7 @@ public class ClientHandlingThread extends Thread {
         }
     }
 
-    public void sendMessage(String line) {
+    public void sendMessage(Message message) {
 
     }
 }
