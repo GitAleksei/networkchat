@@ -9,21 +9,28 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Arrays;
 
-public class ClientHandlingThread extends Thread {
+public class ClientThread extends Thread {
     private final Socket socket;
     private final Server server;
+    private BufferedReader in;
+    private PrintWriter out;
 
-    public ClientHandlingThread(Socket socket, Server server)
+    public ClientThread(Socket socket, Server server)
     {
         this.socket = socket;
         this.server = server;
+
+        try {
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            out = new PrintWriter(socket.getOutputStream(), true);
+        } catch (IOException ex) {
+            Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
+        }
     }
 
     @Override
     public void run() {
-        try (BufferedReader in =
-                     new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-
+        try {
             Logger.INSTANCE.log("Client connected: " + socket);
 
             while (true) {
@@ -51,11 +58,11 @@ public class ClientHandlingThread extends Thread {
     }
 
     public void sendMessage(Message message) {
-        try (PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+        try {
             Gson gson = new Gson();
             String jsonMessage = gson.toJson(message);
             out.println(jsonMessage);
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
         }
     }
