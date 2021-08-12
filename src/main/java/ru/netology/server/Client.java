@@ -5,6 +5,10 @@ public class Client {
     private String name;
     private final ClientThread clientThread;
 
+    public Client(int id, ClientThread clientThread) {
+        this(id, id + "", clientThread);
+    }
+
     public Client(int id, String name, ClientThread clientThread) {
         this.id = id;
         this.name = name;
@@ -21,5 +25,9 @@ public class Client {
 
     public ClientThread getClientThread() {
         return clientThread;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

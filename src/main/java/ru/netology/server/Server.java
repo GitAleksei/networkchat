@@ -4,22 +4,24 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Server {
-    private List<ClientHandlingThread> clientThreads = new CopyOnWriteArrayList<>();
+    private Map<Integer, Client> clients = new ConcurrentHashMap<>();
 
     public Server() {
         Logger.INSTANCE.log("Start server!");
+        int idClients = 1;
 
         try (ServerSocket serverSocket = new ServerSocket(Settings.PORT)) {
             while (true) {
                 try (Socket socket = serverSocket.accept()) {
+                    ClientThread clientThread = new ClientThread(socket, this);
+                    Client client = new Client(idClients++, clientThread);
+                    clients.put(client.getId(), client);
 
-                    ClientHandlingThread client = new ClientHandlingThread(socket, this);
-                    clientThreads.add(client);
-                    client.start();
+                    client.getClientThread().start();
 
                 } catch (IOException ex) {
                     Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
@@ -32,7 +34,11 @@ public class Server {
         Logger.INSTANCE.log("Stop server!");
     }
 
+    public Map<Integer, Client> getClients() {
+        return clients;
+    }
+
     public void sendMessageAll(Message msg) {
-        clientThreads.forEach(thread -> thread.sendMessage(msg));
+        clients.forEach((key, value) -> value.getClientThread().sendMessage(msg));
     }
 }
