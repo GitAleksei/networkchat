@@ -12,17 +12,13 @@ public class Server {
 
     public Server() {
         Logger.INSTANCE.log("Start server!");
-        int idClients = 1;
+        int idClient = 1;
 
         try (ServerSocket serverSocket = new ServerSocket(Settings.PORT)) {
             while (true) {
                 try (Socket socket = serverSocket.accept()) {
-                    ClientThread clientThread = new ClientThread(socket, this);
-                    Client client = new Client(idClients++, clientThread);
-                    clients.put(client.getId(), client);
-
-                    client.getClientThread().start();
-
+                    ClientThread clientThread = new ClientThread(socket, this, idClient++);
+                    clientThread.start();
                 } catch (IOException ex) {
                     Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
                 }

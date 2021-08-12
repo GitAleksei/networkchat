@@ -5,10 +5,6 @@ public class Client {
     private String name;
     private final ClientThread clientThread;
 
-    public Client(int id, ClientThread clientThread) {
-        this(id, id + "", clientThread);
-    }
-
     public Client(int id, String name, ClientThread clientThread) {
         this.id = id;
         this.name = name;

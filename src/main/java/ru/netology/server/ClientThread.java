@@ -8,17 +8,20 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Arrays;
+import java.util.Date;
 
 public class ClientThread extends Thread {
     private final Socket socket;
     private final Server server;
     private BufferedReader in;
     private PrintWriter out;
+    private final int idClient;
 
-    public ClientThread(Socket socket, Server server)
+    public ClientThread(Socket socket, Server server, int idClient)
     {
         this.socket = socket;
         this.server = server;
+        this.idClient = idClient;
 
         try {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -43,12 +46,30 @@ public class ClientThread extends Thread {
                 Gson gson = new Gson();
                 Message message = gson.fromJson(stringBuilder.toString(), Message.class);
 
-                Logger.INSTANCE.log(message.toString());
+                if (message.getText().equals(Settings.START_MESSAGE_NEW_CLIENT)) {
+                    Logger.INSTANCE.log("Пользователь " + message.getName() +
+                            " добавился в чат");
 
-                if (message.getText().equals("/exit")) {
+                    server.getClients().put(idClient,
+                            new Client(idClient, message.getName(), this));
+
+                    server.sendMessageAll(
+                            new Message("Server", message.getName() + " добавился в чат",
+                                    new Date()));
+                    continue;
+                }
+
+                if (message.getText().equals(Settings.EXIT_MESSAGE)) {
+                    Client client = server.getClients().get(idClient);
+                    Logger.INSTANCE.log("Пользователь " + client.getName() + " покинул чат");
+                    server.sendMessageAll(
+                            new Message("Server", client.getName() + " покинул чат",
+                            new Date()));
+                    server.getClients().remove(idClient);
                     break;
                 }
 
+                Logger.INSTANCE.log(message.toString());
                 server.sendMessageAll(message);
             }
 
