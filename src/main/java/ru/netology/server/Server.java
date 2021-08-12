@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Server {
-    private Map<Integer, Client> clients = new ConcurrentHashMap<>();
+    private final Map<Integer, Client> clients = new ConcurrentHashMap<>();
 
     public Server() {
         Logger.INSTANCE.log("Start server!");

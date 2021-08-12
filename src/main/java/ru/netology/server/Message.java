@@ -1,12 +1,11 @@
 package ru.netology.server;
 
 import java.util.Date;
-import java.util.List;
 
 public class Message {
-    private String name;
-    private String text;
-    private Date date;
+    private final String name;
+    private final String text;
+    private final Date date;
 
     public Message(String name, String text, Date date) {
         this.name = name;

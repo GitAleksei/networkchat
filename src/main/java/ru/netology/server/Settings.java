@@ -6,7 +6,8 @@ import java.util.Arrays;
 import java.util.Properties;
 
 public class Settings {
-    private static final String SETTINGS_FILE_NAME = "settings_server.txt";
+    private static final String SETTINGS_FILE_NAME =
+            "src/main/resources/settings_server.properties";
 
     public static int PORT;
     public static String START_MESSAGE_NEW_CLIENT;

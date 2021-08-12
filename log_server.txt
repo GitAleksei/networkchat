@@ -25,3 +25,40 @@
 
 1. [Wed Aug 11 22:27:48 KRAT 2021] Start server!
 2. [Wed Aug 11 22:27:48 KRAT 2021] Read "settings_server.txt"
+
+1. [Thu Aug 12 11:36:40 UTC 2021] Start server!
+2. [Thu Aug 12 11:36:40 UTC 2021] Read "settings_server.txt"
+3. [Thu Aug 12 11:37:52 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=30432,localport=4362]
+4. [Thu Aug 12 11:37:52 UTC 2021] [java.net.SocketInputStream.socketRead0(Native Method), java.net.SocketInputStream.socketRead(SocketInputStream.java:116), java.net.SocketInputStream.read(SocketInputStream.java:171), java.net.SocketInputStream.read(SocketInputStream.java:141), sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284), sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326), sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178), java.io.InputStreamReader.read(InputStreamReader.java:184), java.io.BufferedReader.fill(BufferedReader.java:161), java.io.BufferedReader.readLine(BufferedReader.java:324), java.io.BufferedReader.readLine(BufferedReader.java:389), ru.netology.server.ClientThread.run(ClientThread.java:42)] socket closed
+5. [Thu Aug 12 11:42:17 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=46398,localport=4362]
+6. [Thu Aug 12 11:42:17 UTC 2021] [java.net.SocketInputStream.socketRead0(Native Method), java.net.SocketInputStream.socketRead(SocketInputStream.java:116), java.net.SocketInputStream.read(SocketInputStream.java:171), java.net.SocketInputStream.read(SocketInputStream.java:141), sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284), sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326), sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178), java.io.InputStreamReader.read(InputStreamReader.java:184), java.io.BufferedReader.fill(BufferedReader.java:161), java.io.BufferedReader.readLine(BufferedReader.java:324), java.io.BufferedReader.readLine(BufferedReader.java:389), ru.netology.server.ClientThread.run(ClientThread.java:42)] socket closed
+7. [Thu Aug 12 11:42:30 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=47198,localport=4362]
+8. [Thu Aug 12 11:42:30 UTC 2021] [java.net.SocketInputStream.socketRead0(Native Method), java.net.SocketInputStream.socketRead(SocketInputStream.java:116), java.net.SocketInputStream.read(SocketInputStream.java:171), java.net.SocketInputStream.read(SocketInputStream.java:141), sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284), sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326), sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178), java.io.InputStreamReader.read(InputStreamReader.java:184), java.io.BufferedReader.fill(BufferedReader.java:161), java.io.BufferedReader.readLine(BufferedReader.java:324), java.io.BufferedReader.readLine(BufferedReader.java:389), ru.netology.server.ClientThread.run(ClientThread.java:42)] socket closed
+
+1. [Thu Aug 12 16:15:48 UTC 2021] Start server!
+2. [Thu Aug 12 16:15:48 UTC 2021] Read "settings_server.txt"
+3. [Thu Aug 12 16:16:04 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=5292,localport=4362]
+4. [Thu Aug 12 16:16:04 UTC 2021] [java.net.SocketInputStream.socketRead0(Native Method), java.net.SocketInputStream.socketRead(SocketInputStream.java:116), java.net.SocketInputStream.read(SocketInputStream.java:171), java.net.SocketInputStream.read(SocketInputStream.java:141), sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284), sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326), sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178), java.io.InputStreamReader.read(InputStreamReader.java:184), java.io.BufferedReader.fill(BufferedReader.java:161), java.io.BufferedReader.readLine(BufferedReader.java:324), java.io.BufferedReader.readLine(BufferedReader.java:389), ru.netology.server.ClientThread.run(ClientThread.java:42)] socket closed
+5. [Thu Aug 12 16:16:18 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=6179,localport=4362]
+6. [Thu Aug 12 16:16:18 UTC 2021] [java.net.SocketInputStream.socketRead0(Native Method), java.net.SocketInputStream.socketRead(SocketInputStream.java:116), java.net.SocketInputStream.read(SocketInputStream.java:171), java.net.SocketInputStream.read(SocketInputStream.java:141), sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284), sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326), sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178), java.io.InputStreamReader.read(InputStreamReader.java:184), java.io.BufferedReader.fill(BufferedReader.java:161), java.io.BufferedReader.readLine(BufferedReader.java:324), java.io.BufferedReader.readLine(BufferedReader.java:389), ru.netology.server.ClientThread.run(ClientThread.java:42)] socket closed
+
+1. [Thu Aug 12 16:17:36 UTC 2021] Start server!
+2. [Thu Aug 12 16:17:36 UTC 2021] Read "settings_server.txt"
+
+1. [Thu Aug 12 16:34:25 UTC 2021] Start server!
+2. [Thu Aug 12 16:34:25 UTC 2021] [java.io.FileInputStream.open0(Native Method), java.io.FileInputStream.open(FileInputStream.java:195), java.io.FileInputStream.<init>(FileInputStream.java:138), java.io.FileInputStream.<init>(FileInputStream.java:93), java.io.FileReader.<init>(FileReader.java:58), ru.netology.server.Settings.<clinit>(Settings.java:18), ru.netology.server.Server.<init>(Server.java:17), ru.netology.server.Main.main(Main.java:6)] settings_server.txt (The system cannot find the file specified)
+
+1. [Thu Aug 12 16:37:01 UTC 2021] Start server!
+2. [Thu Aug 12 16:37:01 UTC 2021] [java.io.FileInputStream.open0(Native Method), java.io.FileInputStream.open(FileInputStream.java:195), java.io.FileInputStream.<init>(FileInputStream.java:138), java.io.FileInputStream.<init>(FileInputStream.java:93), java.io.FileReader.<init>(FileReader.java:58), ru.netology.server.Settings.<clinit>(Settings.java:18), ru.netology.server.Server.<init>(Server.java:17), ru.netology.server.Main.main(Main.java:6)] settings_server.properties (The system cannot find the file specified)
+
+1. [Thu Aug 12 16:39:26 UTC 2021] Start server!
+2. [Thu Aug 12 16:39:26 UTC 2021] Read "src/main/resources/settings_server.properties"
+
+1. [Thu Aug 12 16:41:23 UTC 2021] Start server!
+2. [Thu Aug 12 16:41:23 UTC 2021] Read "src/main/resources/settings_server.properties"
+
+1. [Thu Aug 12 16:41:46 UTC 2021] Start server!
+2. [Thu Aug 12 16:41:46 UTC 2021] [java.io.FileInputStream.open0(Native Method), java.io.FileInputStream.open(FileInputStream.java:195), java.io.FileInputStream.<init>(FileInputStream.java:138), java.io.FileInputStream.<init>(FileInputStream.java:93), java.io.FileReader.<init>(FileReader.java:58), ru.netology.server.Settings.<clinit>(Settings.java:18), ru.netology.server.Server.<init>(Server.java:17), ru.netology.server.Main.main(Main.java:6)] settings_server.properties (The system cannot find the file specified)
+
+1. [Thu Aug 12 16:42:10 UTC 2021] Start server!
+2. [Thu Aug 12 16:42:10 UTC 2021] Read "src/main/resources/settings_server.properties"
