@@ -1,4 +1,4 @@
-package ru.netology.server;
+package ru.netology;
 
 import java.io.IOException;
 import java.net.ServerSocket;

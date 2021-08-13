@@ -5,43 +5,25 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ru.netology</groupId>
-  <artifactId>networkchat</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>client</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>server</module>
-    <module>client</module>
-  </modules>
+  <packaging>jar</packaging>
 
-  <name>networkchat</name>
+  <name>client</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
+
+  <parent>
+    <groupId>ru.netology</groupId>
+    <artifactId>networkchat</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.7.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.8.5</version>
-    </dependency>
-  </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -67,6 +49,13 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>ru.netology.Main</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -87,15 +76,5 @@
         </plugin>
       </plugins>
     </pluginManagement>
-      <plugins>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <configuration>
-                  <source>8</source>
-                  <target>8</target>
-              </configuration>
-          </plugin>
-      </plugins>
   </build>
 </project>

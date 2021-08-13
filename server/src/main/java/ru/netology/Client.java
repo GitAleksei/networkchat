@@ -1,4 +1,4 @@
-package ru.netology.server;
+package ru.netology;
 
 public class Client {
     private final int id;

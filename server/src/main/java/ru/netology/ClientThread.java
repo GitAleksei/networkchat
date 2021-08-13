@@ -1,4 +1,4 @@
-package ru.netology.server;
+package ru.netology;
 
 import com.google.gson.Gson;
 
