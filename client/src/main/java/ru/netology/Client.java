@@ -20,6 +20,8 @@ public class Client {
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              Scanner scanner = new Scanner(System.in)) {
 
+            Logger.INSTANCE.log("Подключились к серверу " + socket);
+
             System.out.print("Введите ник: ");
             String userName = scanner.nextLine();
 
@@ -32,14 +34,14 @@ public class Client {
                     Settings.EXIT_MESSAGE + "\"");
 
             ListenThread listenThread = new ListenThread(in);
+            listenThread.start();
 
             while (true) {
                 String printingText = scanner.nextLine();
 
-                message = new Message(userName, Settings.EXIT_MESSAGE, new Date());
+                message = new Message(userName, printingText, new Date());
                 jsonMessage = gson.toJson(message);
                 out.println(jsonMessage);
-                Logger.INSTANCE.log(message.toString());
 
                 if (Settings.EXIT_MESSAGE.equals(printingText)) {
                     listenThread.interrupt();

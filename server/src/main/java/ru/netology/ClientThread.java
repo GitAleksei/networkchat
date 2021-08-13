@@ -36,15 +36,11 @@ public class ClientThread extends Thread {
         try {
             Logger.INSTANCE.log("Client connected: " + socket);
 
-            while (true) {
-                String line;
-                StringBuilder stringBuilder = new StringBuilder();
-                while ((line = in.readLine()) != null) {
-                    stringBuilder.append(line);
-                }
+            String line;
+            while ((line = in.readLine()) != null) {
 
                 Gson gson = new Gson();
-                Message message = gson.fromJson(stringBuilder.toString(), Message.class);
+                Message message = gson.fromJson(line, Message.class);
 
                 if (message.getText().equals(Settings.START_MESSAGE_NEW_CLIENT)) {
                     Logger.INSTANCE.log("Пользователь " + message.getName() +
@@ -75,6 +71,12 @@ public class ClientThread extends Thread {
 
         } catch (IOException ex) {
             Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
+        } finally {
+            try {
+                socket.close();
+            } catch (IOException ex) {
+                Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
+            }
         }
     }
 

@@ -16,7 +16,8 @@ public class Server {
 
         try (ServerSocket serverSocket = new ServerSocket(Settings.PORT)) {
             while (true) {
-                try (Socket socket = serverSocket.accept()) {
+                try {
+                    Socket socket = serverSocket.accept();
                     ClientThread clientThread = new ClientThread(socket, this, idClient++);
                     clientThread.start();
                 } catch (IOException ex) {
