@@ -295,3 +295,76 @@
 11. [Fri Aug 13 15:57:08 UTC 2021] [Fri Aug 13 15:57:08 UTC 2021]{Алеша} И мне, Сыва
 12. [Fri Aug 13 15:59:00 UTC 2021] Пользователь Алеша покинул чат
 13. [Fri Aug 13 15:59:06 UTC 2021] Пользователь Сепан покинул чат
+
+1. [Fri Aug 13 16:15:32 UTC 2021] Start server!
+2. [Fri Aug 13 16:15:32 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+
+1. [Fri Aug 13 16:21:16 UTC 2021] Start server!
+2. [Fri Aug 13 16:21:16 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+
+1. [Fri Aug 13 16:27:37 UTC 2021] Start server!
+2. [Fri Aug 13 16:27:37 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 16:29:58 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=60073,localport=4362]
+
+1. [Fri Aug 13 16:34:26 UTC 2021] Start server!
+2. [Fri Aug 13 16:34:26 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 16:34:57 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=14290,localport=4362]
+
+1. [Fri Aug 13 16:59:00 UTC 2021] Start server!
+2. [Fri Aug 13 16:59:00 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 16:59:24 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=6704,localport=4362]
+
+1. [Fri Aug 13 17:02:45 UTC 2021] Start server!
+2. [Fri Aug 13 17:02:46 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:02:48 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=19006,localport=4362]
+4. [Fri Aug 13 17:03:27 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=21376,localport=4362]
+
+1. [Fri Aug 13 17:04:16 UTC 2021] Start server!
+2. [Fri Aug 13 17:04:16 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:04:16 UTC 2021] [java.net.DualStackPlainSocketImpl.bind0(Native Method), java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106), java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387), java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190), java.net.ServerSocket.bind(ServerSocket.java:375), java.net.ServerSocket.<init>(ServerSocket.java:237), java.net.ServerSocket.<init>(ServerSocket.java:128), ru.netology.Server.<init>(Server.java:17), ru.netology.Main.main(Main.java:5)] Address already in use: JVM_Bind
+4. [Fri Aug 13 17:04:16 UTC 2021] Stop server!
+
+1. [Fri Aug 13 17:04:24 UTC 2021] Start server!
+2. [Fri Aug 13 17:04:24 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:04:24 UTC 2021] [java.net.DualStackPlainSocketImpl.bind0(Native Method), java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106), java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387), java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190), java.net.ServerSocket.bind(ServerSocket.java:375), java.net.ServerSocket.<init>(ServerSocket.java:237), java.net.ServerSocket.<init>(ServerSocket.java:128), ru.netology.Server.<init>(Server.java:17), ru.netology.Main.main(Main.java:5)] Address already in use: JVM_Bind
+4. [Fri Aug 13 17:04:24 UTC 2021] Stop server!
+5. [Fri Aug 13 17:04:34 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=25369,localport=4362]
+
+1. [Fri Aug 13 17:04:41 UTC 2021] Start server!
+2. [Fri Aug 13 17:04:41 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:04:41 UTC 2021] [java.net.DualStackPlainSocketImpl.bind0(Native Method), java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106), java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387), java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190), java.net.ServerSocket.bind(ServerSocket.java:375), java.net.ServerSocket.<init>(ServerSocket.java:237), java.net.ServerSocket.<init>(ServerSocket.java:128), ru.netology.Server.<init>(Server.java:17), ru.netology.Main.main(Main.java:5)] Address already in use: JVM_Bind
+4. [Fri Aug 13 17:04:41 UTC 2021] Stop server!
+
+1. [Fri Aug 13 17:05:17 UTC 2021] Start server!
+2. [Fri Aug 13 17:05:17 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:05:24 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=28399,localport=4362]
+4. [Fri Aug 13 17:05:30 UTC 2021] Пользователь Nick добавился в чат
+5. [Fri Aug 13 17:05:33 UTC 2021] [Fri Aug 13 17:05:33 UTC 2021]{Nick} sdfjl
+6. [Fri Aug 13 17:05:35 UTC 2021] [Fri Aug 13 17:05:35 UTC 2021]{Nick} ghbdtn
+7. [Fri Aug 13 17:05:38 UTC 2021] [Fri Aug 13 17:05:38 UTC 2021]{Nick} hi
+8. [Fri Aug 13 17:05:44 UTC 2021] Пользователь Nick покинул чат
+
+1. [Fri Aug 13 17:19:26 UTC 2021] Start server!
+2. [Fri Aug 13 17:19:26 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:19:33 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=15119,localport=4362]
+
+1. [Fri Aug 13 17:21:11 UTC 2021] Start server!
+2. [Fri Aug 13 17:21:11 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:21:35 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=22441,localport=4362]
+
+1. [Fri Aug 13 17:23:21 UTC 2021] Start server!
+2. [Fri Aug 13 17:23:21 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:23:24 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=28964,localport=4362]
+
+1. [Fri Aug 13 17:25:24 UTC 2021] Start server!
+2. [Fri Aug 13 17:25:24 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:25:54 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=38050,localport=4362]
+4. [Fri Aug 13 17:26:17 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=39412,localport=4362]
+
+1. [Fri Aug 13 17:28:51 UTC 2021] Start server!
+2. [Fri Aug 13 17:28:51 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:29:05 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=49523,localport=4362]
+
+1. [Fri Aug 13 17:30:04 UTC 2021] Start server!
+2. [Fri Aug 13 17:30:04 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 17:30:07 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=53273,localport=4362]
