@@ -82,3 +82,11 @@
 2. [Fri Aug 13 11:26:57 UTC 2021] Read "server/src/main/resources/settings_server.properties"
 3. [Fri Aug 13 11:27:37 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=1962,localport=4362]
 4. [Fri Aug 13 11:27:37 UTC 2021] [java.base/java.net.SocketInputStream.socketRead0(Native Method), java.base/java.net.SocketInputStream.socketRead(Unknown Source), java.base/java.net.SocketInputStream.read(Unknown Source), java.base/java.net.SocketInputStream.read(Unknown Source), java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source), java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source), java.base/sun.nio.cs.StreamDecoder.read(Unknown Source), java.base/java.io.InputStreamReader.read(Unknown Source), java.base/java.io.BufferedReader.fill(Unknown Source), java.base/java.io.BufferedReader.readLine(Unknown Source), java.base/java.io.BufferedReader.readLine(Unknown Source), ru.netology.ClientThread.run(ClientThread.java:42)] Socket closed
+
+1. [Fri Aug 13 11:43:14 UTC 2021] Start server!
+2. [Fri Aug 13 11:43:14 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+
+1. [Fri Aug 13 12:46:16 UTC 2021] Start server!
+2. [Fri Aug 13 12:46:16 UTC 2021] Read "server/src/main/resources/settings_server.properties"
+3. [Fri Aug 13 12:46:27 UTC 2021] Client connected: Socket[addr=/127.0.0.1,port=28219,localport=4362]
+4. [Fri Aug 13 12:46:27 UTC 2021] [java.net.SocketInputStream.socketRead0(Native Method), java.net.SocketInputStream.socketRead(SocketInputStream.java:116), java.net.SocketInputStream.read(SocketInputStream.java:171), java.net.SocketInputStream.read(SocketInputStream.java:141), sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284), sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326), sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178), java.io.InputStreamReader.read(InputStreamReader.java:184), java.io.BufferedReader.fill(BufferedReader.java:161), java.io.BufferedReader.readLine(BufferedReader.java:324), java.io.BufferedReader.readLine(BufferedReader.java:389), ru.netology.ClientThread.run(ClientThread.java:42)] socket closed
