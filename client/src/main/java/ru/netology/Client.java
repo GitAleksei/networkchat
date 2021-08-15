@@ -20,9 +20,9 @@ public class Client {
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              Scanner scanner = new Scanner(System.in)) {
 
-            Logger.INSTANCE.log("Подключились к серверу " + socket);
+            Logger.INSTANCE.log("Connected to the server " + socket);
 
-            System.out.print("Введите ник: ");
+            System.out.print(" Enter your nickname: ");
             String userName = scanner.nextLine();
 
             Message message = new Message(userName, Settings.START_MESSAGE_NEW_CLIENT, new Date());
@@ -30,7 +30,7 @@ public class Client {
             String jsonMessage = gson.toJson(message);
             out.println(jsonMessage);
 
-            System.out.println("Наслаждайтесь общением в чате. Для выхода напишите \"" +
+            System.out.println("Enjoy chatting. To exit write  \"" +
                     Settings.EXIT_MESSAGE + "\"");
 
             ListenThread listenThread = new ListenThread(in);
@@ -49,13 +49,11 @@ public class Client {
                 }
             }
 
-            System.out.println("Клиент прекратил работу!");
-            Logger.INSTANCE.log("Клиент прекратил работу!");
-
         } catch (IOException ex) {
             Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
         }
 
-        Logger.INSTANCE.log("Stop client!");
+        System.out.println("The client program has stopped working!");
+        Logger.INSTANCE.log("The client program has stopped working!");
     }
 }

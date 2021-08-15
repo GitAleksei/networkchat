@@ -28,7 +28,7 @@ public class ListenThread extends Thread {
         } catch (IOException ex) {
             Logger.INSTANCE.log(Arrays.toString(ex.getStackTrace()) + " " + ex.getMessage());
         } finally {
-            Logger.INSTANCE.log("Поток прослушки входных сообщений завершен. ListenThread");
+            Logger.INSTANCE.log("ListenThread is over");
         }
     }
 }

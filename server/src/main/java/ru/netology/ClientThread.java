@@ -43,23 +43,23 @@ public class ClientThread extends Thread {
                 Message message = gson.fromJson(line, Message.class);
 
                 if (message.getText().equals(Settings.START_MESSAGE_NEW_CLIENT)) {
-                    Logger.INSTANCE.log("Пользователь " + message.getName() +
-                            " добавился в чат");
+                    Logger.INSTANCE.log("User " + message.getName() +
+                            " connected to chat");
 
                     server.getClients().put(idClient,
                             new Client(idClient, message.getName(), this));
 
                     server.sendMessageAll(
-                            new Message("Server", message.getName() + " добавился в чат",
+                            new Message("Server", message.getName() + " connected to chat",
                                     new Date()));
                     continue;
                 }
 
                 if (message.getText().equals(Settings.EXIT_MESSAGE)) {
                     Client client = server.getClients().get(idClient);
-                    Logger.INSTANCE.log("Пользователь " + client.getName() + " покинул чат");
+                    Logger.INSTANCE.log("User " + client.getName() + " left chat");
                     server.sendMessageAll(
-                            new Message("Server", client.getName() + " покинул чат",
+                            new Message("Server", client.getName() + " left chat",
                             new Date()));
                     server.getClients().remove(idClient);
                     break;
